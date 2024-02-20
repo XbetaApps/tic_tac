@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تيك تاك تو</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f8f0f0;
+        }
+
+        #gameBoard {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+            margin: 20px 0;
+        }
+
+        .game-cell {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .control-panel, .slider-container, button {
+            margin: 10px;
+        }
+
+        #difficultySlider {
+            margin: 0 15px;
+        }
+    </style>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="control-panel">
+        <button id="toggleMode">لاعبين</button>
+        <div class="slider-container">
+            <label for="difficultySlider">صعوبة اللعبة: </label>
+            <input type="range" id="difficultySlider" min="1" max="3" value="2">
+            <span id="difficultyLabel">متوسط</span>
+        </div>
+    </div>
+    <div id="gameBoard"></div>
+    <button id="restartButton">إعادة اللعب</button>
+    <script src="script.js"></script>
+</body>
+</html>
